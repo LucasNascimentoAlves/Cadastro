@@ -22,6 +22,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
     <title>Imprimir Dados do Banco</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
     <table>
         <tr>
             <th>ID</th>
-            <th>Matrícula</th>
+            <th>MatrÃ­cula</th>
             <th>Nome Completo</th>
             <th>Email</th>
             <th>Ano de Egresso</th>
@@ -68,7 +69,7 @@
     <table>
         <tr>
             <th>ID</th>
-            <th>Matrícula</th>
+            <th>MatrÃ­cula</th>
             <th>Nome Completo</th>
             <th>Email</th>
             <th>Ano de Egresso</th>
@@ -105,7 +106,7 @@
     <h2>Tabela Disciplinas</h2>
     <table>
         <tr>
-            <th>Código da Disciplina</th>
+            <th>CÃ³digo da Disciplina</th>
             <th>Nome</th>
             <th>ID do Professor</th>
         </tr>
@@ -134,11 +135,11 @@
         ResultSet resultMatriculas = statementMatriculas.executeQuery(sqlMatriculas);
     %>
     
-    <h2>Tabela Matrículas</h2>
+    <h2>Tabela MatrÃ­culas</h2>
     <table>
         <tr>
             <th>ID do Estudante</th>
-            <th>Código da Disciplina</th>
+            <th>CÃ³digo da Disciplina</th>
         </tr>
         <%
             while (resultMatriculas.next()) {
