@@ -127,35 +127,6 @@
             statementDisciplinas.close();
         %>
     </table>
-
-    <%  
-        // Tabela "matriculas"
-        String sqlMatriculas = "SELECT * FROM matriculas";
-        Statement statementMatriculas = connection.createStatement();
-        ResultSet resultMatriculas = statementMatriculas.executeQuery(sqlMatriculas);
-    %>
-    
-    <h2>Tabela Matrículas</h2>
-    <table>
-        <tr>
-            <th>ID do Estudante</th>
-            <th>Código da Disciplina</th>
-        </tr>
-        <%
-            while (resultMatriculas.next()) {
-                int idEstudante = resultMatriculas.getInt("id_estudante");
-                String codigoDisciplina = resultMatriculas.getString("codigo_disciplina");
-        %>
-        <tr>
-            <td><%= idEstudante %></td>
-            <td><%= codigoDisciplina %></td>
-        </tr>
-        <%
-            }
-            resultMatriculas.close();
-            statementMatriculas.close();
-        %>
-    </table>
 </body>
 </html>
 
